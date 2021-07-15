@@ -1,0 +1,91 @@
+
+
+/*here we used the variable color in the root to change all seite color */
+:root {
+    --color: #4c387e;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    
+}
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#board {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    font-size: 10rem;
+    border: solid 1px var(--color);
+}
+/*here we try hiding the boarder using each methode in css */
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3){
+    border-top: none;
+}
+
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7){
+    border-left: none;
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9){
+    border-bottom: none;
+}
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9){
+    border-right: none;
+}
+/*end of hiding the boarder*/
+
+#restart {
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--color);
+    border-color: var(--color);
+    border-radius: 5px;
+    font-size: 1rem;
+
+    transition: 200ms;
+}
+
+/*hover effect for the botton*/
+#restart:hover {
+    transform: translateY(-5px);
+}
+
+
